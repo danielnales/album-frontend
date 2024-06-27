@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardActionArea } from '@mui/material';
 import AlbumCard from './AlbumCard';
 import { useAlbums } from '../hooks/useAlbums';
+import Button from '@mui/material/Button';
 
 const AlbumOverview = () => {
   const albums = useAlbums();
@@ -10,6 +11,9 @@ const AlbumOverview = () => {
 
   return (
     <div>
+      <Link to="/new">
+         <Button variant="contained">Nieuw Album</Button>
+      </Link>
       <h1>Albums</h1>
       <Grid container spacing={2}>
         {sortedAlbums.map((album) => (

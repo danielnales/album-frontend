@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { AppBar, Toolbar, Container, Typography, Button } from '@mui/material';
 import AlbumOverview from './components/AlbumOverview';
+import AlbumDetail from './components/AlbumDetail';
+import CreateAlbum from './components/CreateAlbum';
 
 function App() {
       return (
@@ -19,6 +21,8 @@ function App() {
         <Routes>
           <Route path="/" element={<div><h1>Homepage</h1><p>This is the homepage</p></div>} />
           <Route path="/albums" element={<AlbumOverview />} />
+          <Route path="/albums/:id" element={<AlbumDetail />} />
+          <Route path="/new" element={<CreateAlbum />} />
         </Routes>
       </Container>
     </BrowserRouter>
