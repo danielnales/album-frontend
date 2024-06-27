@@ -1,6 +1,5 @@
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
-import { Card, CardActionArea } from '@mui/material';
 import AlbumCard from './AlbumCard';
 import { useAlbums } from '../hooks/useAlbums';
 import Button from '@mui/material/Button';
